@@ -1,0 +1,56 @@
+.experience {
+  padding-block: 6rem;
+}
+
+.experience__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+.experience__image {
+  position: relative;
+  min-height: 420px;
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, rgba(232, 163, 61, 0.15), transparent 50%),
+    url("/images/sedan.jpg") center / cover no-repeat;
+  box-shadow: var(--shadow-card);
+}
+
+/* Marco decorativo desplazado */
+.experience__image::before {
+  content: "";
+  position: absolute;
+  inset: 18px -18px -18px 18px;
+  z-index: -1;
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  opacity: 0.5;
+}
+
+.experience__content h2 {
+  margin-bottom: 1.25rem;
+}
+
+.experience__content > p:not(.eyebrow) {
+  margin-bottom: 1.75rem;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+}
+
+.experience__content .check-list {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 860px) {
+  .experience__grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .experience__image {
+    min-height: 280px;
+  }
+}

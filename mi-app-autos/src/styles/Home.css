@@ -1,0 +1,29 @@
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.featured {
+  padding-top: 5rem;
+}
+
+.featured__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.featured__header .eyebrow {
+  margin-bottom: 0.5rem;
+}
+
+.featured__title {
+  max-width: 18ch;
+}
+
+.featured__link {
+  padding-bottom: 0.4rem;
+}
