@@ -1,0 +1,33 @@
+.cars-page {
+  padding-block: 4rem 5rem;
+}
+
+.cars-page > h1 {
+  margin-bottom: 2rem;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 800;
+}
+
+.cars-page > h1::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin-top: 1rem;
+  border-radius: 4px;
+  background: var(--color-accent);
+}
+
+.cars-page .car-list {
+  margin-top: 2rem;
+}
+
+.cars-page__empty {
+  margin-top: 2rem;
+  padding: 3rem 1.5rem;
+  border: 1px dashed rgba(232, 163, 61, 0.4);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  color: var(--color-muted);
+  text-align: center;
+}

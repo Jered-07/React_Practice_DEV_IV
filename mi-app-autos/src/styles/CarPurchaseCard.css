@@ -1,0 +1,93 @@
+.purchase-card {
+  position: sticky;
+  top: 96px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border: 1px solid rgba(232, 163, 61, 0.35);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at top right, rgba(232, 163, 61, 0.18), transparent 60%),
+    var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.purchase-card__label {
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.purchase-card__price {
+  margin: 0.4rem 0 0.75rem;
+  color: var(--color-accent);
+  font-size: 2.3rem;
+  font-weight: 800;
+}
+
+.purchase-card__description {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.purchase-card__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.95rem 1.4rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform var(--transition), background var(--transition),
+    box-shadow var(--transition), border-color var(--transition), color var(--transition);
+}
+
+.purchase-card__button + .purchase-card__button {
+  margin-top: 0.75rem;
+}
+
+.purchase-card__button:hover {
+  transform: translateY(-2px);
+}
+
+.purchase-card__button--primary {
+  background: var(--color-accent);
+  color: #15120c;
+}
+
+.purchase-card__button--primary:hover {
+  background: var(--color-accent-strong);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Botón de favoritos (listo para cuando se descomente) */
+.purchase-card__button--favorite {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: var(--color-text);
+}
+
+.purchase-card__button--favorite:hover,
+.purchase-card__button--favorite[aria-pressed="true"] {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.purchase-card__heart {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .purchase-card {
+    position: static;
+  }
+}

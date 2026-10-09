@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">J_Motors</string>
+    <string name="title_activity_main">J_Motors</string>
+    <string name="package_name">com.JMotors.app</string>
+    <string name="custom_url_scheme">com.JMotors.app</string>
+</resources>

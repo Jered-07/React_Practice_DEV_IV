@@ -7,7 +7,7 @@ const Hero = () => {
     <section className="hero">
       <div className="container">
         <div className="hero__content">
-          <p className="eyebrow">Jered Motors · Costa Rica</p>
+          <p className="eyebrow">J Motors · Costa Rica</p>
  
           <h1 className="hero__title">El auto que mueve sus planes</h1>
  

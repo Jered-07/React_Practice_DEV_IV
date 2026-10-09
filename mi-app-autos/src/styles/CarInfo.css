@@ -1,0 +1,85 @@
+.car-info {
+  padding: 2.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+/* Enlace "Volver a autos" */
+.car-info > a {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.car-info > a:hover {
+  color: var(--color-accent);
+  transform: translateX(-4px);
+}
+
+/* Ubicación */
+.car-info > a + p {
+  color: var(--color-accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.car-info > h1 {
+  margin: 0.4rem 0 1.5rem;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 800;
+}
+
+.car-info__specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 2.25rem;
+}
+
+.car-info__specs span {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-2);
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.car-info__specs strong {
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  letter-spacing: 0;
+}
+
+.car-info h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.35rem;
+}
+
+/* Descripción */
+.car-info h2 + p {
+  margin-bottom: 2rem;
+  color: #c9ccd3;
+}
+
+@media (max-width: 520px) {
+  .car-info {
+    padding: 1.5rem;
+  }
+
+  .car-info__specs {
+    grid-template-columns: 1fr;
+  }
+}

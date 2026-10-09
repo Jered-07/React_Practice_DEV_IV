@@ -9,7 +9,7 @@ const Navbar = () => {
         <NavLink
           to="/"
           className="navbar__brand"
-          aria-label="AutoShop — Inicio"
+          aria-label="J Motors — Inicio"
         >
           <Logo />
         </NavLink>

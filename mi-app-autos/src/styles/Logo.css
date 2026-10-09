@@ -1,40 +1,80 @@
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.7rem;
 }
 
+/* Emblema: placa inclinada con líneas de velocidad */
 .logo__mark {
+  position: relative;
   display: grid;
   place-items: center;
-  width: 2.4rem;
-  height: 2.4rem;
-  border-radius: 10px;
+  width: 2.6rem;
+  height: 2.3rem;
+  margin-left: 0.9rem;
+  border-radius: 6px;
   background: linear-gradient(135deg, var(--color-accent-strong), var(--color-accent) 55%, #b9761c);
+  box-shadow: var(--shadow-glow);
+  transform: skewX(-14deg);
+  transition: transform var(--transition);
+}
+
+/* Líneas de velocidad a la izquierda */
+.logo__mark::before {
+  content: "";
+  position: absolute;
+  right: calc(100% + 4px);
+  top: 50%;
+  width: 0.75rem;
+  height: 0.95rem;
+  transform: translateY(-50%);
+  background:
+    linear-gradient(var(--color-accent), var(--color-accent)) 100% 0 / 100% 2px no-repeat,
+    linear-gradient(var(--color-accent), var(--color-accent)) 100% 50% / 70% 2px no-repeat,
+    linear-gradient(var(--color-accent), var(--color-accent)) 100% 100% / 45% 2px no-repeat;
+  opacity: 0.8;
+}
+
+/* Brillo interior */
+.logo__mark::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 4px;
+}
+
+.logo__letter {
   color: #15120c;
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   font-weight: 800;
-  box-shadow: var(--shadow-glow);
-  transform: skewX(-8deg);
+  line-height: 1;
+}
+
+.logo:hover .logo__mark {
+  transform: skewX(-14deg) translateX(3px);
 }
 
 .logo__text {
   display: flex;
   flex-direction: column;
   font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.3rem;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 0.06em;
   line-height: 1;
+  text-transform: uppercase;
   color: var(--color-text);
 }
 
 .logo__text small {
-  margin-top: 0.2rem;
+  margin-top: 0.25rem;
   color: var(--color-accent);
   font-family: var(--font-body);
-  font-size: 0.62rem;
+  font-size: 0.55rem;
+  font-style: normal;
   font-weight: 600;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
+  letter-spacing: 0.38em;
 }

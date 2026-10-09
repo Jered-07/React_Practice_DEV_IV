@@ -1,9 +1,20 @@
+import "../../../../styles/CarFeatures.css";
 
-const CarFeatures = () => {
+interface CarFeaturesProps {
+  features: string[];
+}
+
+const CarFeatures = ({features}:CarFeaturesProps) => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <h2>Características</h2>
+ 
+      <ul className="car-features">
+        {features.map((feature) => (
+          <li key={feature}>✓ {feature}</li>
+        ))}
+      </ul>
+    </>
   )
 }
 

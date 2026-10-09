@@ -1,0 +1,65 @@
+.contact-copy {
+  position: sticky;
+  top: 110px;
+}
+
+.contact-copy h1 {
+  margin-bottom: 1.25rem;
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  font-weight: 800;
+}
+
+.contact-copy > p:not(.eyebrow) {
+  max-width: 44ch;
+  margin-bottom: 2.25rem;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+}
+
+.contact-details {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-details p {
+  position: relative;
+  padding: 1.1rem 1.25rem 1.1rem 4rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+/* Ícono circular a la izquierda */
+.contact-details p::before {
+  position: absolute;
+  left: 1.1rem;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: var(--color-accent-soft);
+  font-size: 1rem;
+}
+
+.contact-details p:nth-child(1)::before {
+  content: "\1F4AC";
+}
+
+.contact-details p:nth-child(2)::before {
+  content: "\1F4CD";
+}
+
+.contact-details strong {
+  color: var(--color-text);
+}
+
+@media (max-width: 900px) {
+  .contact-copy {
+    position: static;
+  }
+}

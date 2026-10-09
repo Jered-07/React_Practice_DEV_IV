@@ -29,7 +29,7 @@ const Footer = () => {
       </div>
  
       <p className="container footer__copyright">
-        © {new Date().getFullYear()} Jered Motors · Proyecto académico
+        © {new Date().getFullYear()} J Motors · Proyecto académico
       </p>
     </footer>
   )

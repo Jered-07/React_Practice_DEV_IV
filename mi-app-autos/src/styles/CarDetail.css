@@ -1,0 +1,72 @@
+.detail-page {
+  padding-bottom: 5rem;
+}
+
+.detail-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  align-items: start;
+  gap: 3rem;
+  margin-top: -6rem;
+}
+
+@media (max-width: 900px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: -3rem;
+  }
+}
+
+/* Estados: cargando, error y no encontrado */
+.page-section {
+  padding-block: 5rem;
+}
+
+.status-message {
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.status-message::before {
+  content: "";
+  display: block;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin: 0 auto 1rem;
+  border: 3px solid var(--color-surface-2);
+  border-top-color: var(--color-accent);
+  border-radius: 50%;
+  animation: detail-spin 0.8s linear infinite;
+}
+
+.status-message--error {
+  color: #ff8a7a;
+}
+
+.status-message--error::before {
+  content: "!";
+  display: grid;
+  place-items: center;
+  border: none;
+  background: rgba(255, 107, 87, 0.15);
+  color: #ff8a7a;
+  font-weight: 700;
+  animation: none;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+@keyframes detail-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
